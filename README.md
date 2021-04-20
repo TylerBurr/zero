@@ -36,9 +36,9 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 # ⚙️ 
 
-'''
+```
 npm run start
-'''
+```
 
 ## Installation
 ```
