@@ -34,7 +34,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 }
 ```
 
-# ⚙️ 
+# ⚙️ Running
 
 ```
 npm run start
