@@ -1,5 +1,5 @@
 const { queue } = require('../utilities/configUtil');
-function skip(message, serverQueue) {
+function skip(message) {
   const serverQueue = queue.get(message.guild.id);
     if (!message.member.voice.channel)
       return message.channel.send(
