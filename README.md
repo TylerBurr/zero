@@ -1,5 +1,12 @@
 # Zero - Discord Music Bot
 
+# Supported URL's
+```
+youtube
+spotify - Work in progress
+soundcloud - Work in progress
+```
+
 # 🎵 Music commands
 
 ```
@@ -8,10 +15,10 @@ pause, pause the current music.
 resume, puts the current music back on.
 skip, skip to next music.
 stop, stop all music.
-queue, see the next songs. - Work in Progress
+queue, see the next songs.
+nowplaying, see music in progress.
 volume <1 - 100>, change the volume. - Work in Progress
 clear-queue, remove music in the queue. - Work in Progress
-nowplaying, see music in progress. - Work in Progress
 ```
 
 # 💡 General commands
@@ -35,7 +42,6 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 ```
 
 # ⚙️ Running
-
 ```
 npm run start
 ```
