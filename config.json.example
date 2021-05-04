@@ -1,5 +1,5 @@
 {
-    "TOKEN": "",
-    "PREFIX": "!",
-    "STAY_TIME": 30
+    "token": "",
+    "prefix": "!",
+    "stay_time": 3000
 }

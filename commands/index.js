@@ -40,7 +40,7 @@ function start(message) {
   } else if (message.content.startsWith(`${prefix}help`)) {
     return message.channel.send({ embed: help });
   } else {
-    message.channel.send("You need to enter a valid command!");
+    message.channel.send(`You need to enter a valid command!\n Use ${prefix}help for a list of Commands`);
   }
 }
 
