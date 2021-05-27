@@ -11,7 +11,8 @@
     "fluent-ffmpeg": "^2.1.2",
     "node-opus": "^0.3.3",
     "opusscript": "0.0.8",
-    "ytdl-core": "^4.0.6"
+    "youtube-sr": "^4.0.9",
+    "ytdl-core": "^4.8.0"
   },
   "devDependencies": {},
   "scripts": {
