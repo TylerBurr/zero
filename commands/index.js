@@ -40,7 +40,6 @@ function start(message) {
     resume.resume(message);
     return;
   } else if (message.content.startsWith(`${prefix}queue`)) {
-    // viewQueue.viewQueue(message);
     return message.channel.send({ embed: viewQueue.viewQueue(message) });
   } else if (message.content.startsWith(`${prefix}nowplaying`)) {
     nowplaying.nowplaying(message);
