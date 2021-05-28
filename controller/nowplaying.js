@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 const { queue } = require('../utilities/configUtil');
 function nowplaying(message) {
     const serverQueue = queue.get(message.guild.id);
@@ -9,7 +11,14 @@ function nowplaying(message) {
             return message.channel.send("There are no active songs!");
         serverQueue.songs.forEach(function (value, index) {
             if (index === 0) {
-                serverQueue.textChannel.send(value.title);
+                const nowPlaying = new Discord.MessageEmbed()
+                .setColor('#22e335')
+                .setAuthor('ZERO', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+                .addFields(
+                    { name: 'Now Playing', value: `${song.title}`, inline: true},
+                )
+                .setTimestamp()
+                serverQueue.textChannel.send({ embed: nowPlaying });
             }
         })
     }

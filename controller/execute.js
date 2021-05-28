@@ -3,6 +3,8 @@ const sleep = require('../utilities/functionUtil')
 const { STAY_TIME } = require('../utilities/configUtil')
 const { queue } = require('../utilities/configUtil');
 
+const Discord = require('discord.js');
+
 async function execute(message) {
     const serverQueue = queue.get(message.guild.id);
     const args = message.content.split(" ");
@@ -69,9 +71,17 @@ function play(guild, song) {
       })
       .on("error", error => console.error(error));
     dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
-    serverQueue.textChannel.send(`Start playing: **${song.title}**`);
     console.log(`Start playing: **${song.title}**`)
-  }
+    const nowPlaying = new Discord.MessageEmbed()
+        .setColor('#22e335')
+        .setAuthor('ZERO', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+        .addFields(
+            { name: 'Now Playing', value: `${song.title}`, inline: true},
+        )
+        .setTimestamp()
+    serverQueue.textChannel.send({ embed: nowPlaying });
+    }
+    
 
   module.exports = {
     execute,
