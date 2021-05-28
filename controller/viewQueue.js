@@ -10,13 +10,9 @@ function viewQueue(message) {
   if (!serverQueue) return message.channel.send('Unable to queue a song!');
 
   const songQueue = serverQueue.songs.map((song, index) => {
-    return {
-      name: '\u200b',
-      value: `${index + 1} ) ${song.title}`,
-    };
+    return `${index + 1} - ${song.title}`
   });
-
-  return new Discord.MessageEmbed()
+  const viewQueue =  new Discord.MessageEmbed()
     .setColor('#4a4e69')
     .setAuthor(
       'ZERO',
@@ -24,13 +20,12 @@ function viewQueue(message) {
       'https://discord.js.org'
     )
     .setTitle('Song Queue')
-    .addFields(...songQueue)
-    .addField('\u200b', 'End of queue')
-    .addField('\u200b', '\u200b')
+    .setDescription(songQueue)
     .setFooter(
       'https://github.com/TylerBurr/zero',
       'https://i.imgur.com/wSTFkRM.png'
     );
+    serverQueue.textChannel.send({ embed: viewQueue });
 }
 
 module.exports = {
