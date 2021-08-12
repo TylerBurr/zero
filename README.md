@@ -35,9 +35,9 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 ```json
 {
-  "TOKEN": "",
-  "PREFIX": "!",
-  "STAY_TIME": 30
+  "token": "",
+  "prefix": "!",
+  "stay_time": 3000
 }
 ```
 
